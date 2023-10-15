@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "这是一个示例Chrome插件name",
+    "name": "开发助手",
     "version": "0.0.1",
-    "description": "hello, world",
+    "description": "开发小助手,常用时间转换、URL 编码解码、json 除转义、字符串 md5 加密、base64 加解密等",
     "icons": {
         "16": "./icon.png",
         "48": "./icon.png",
@@ -14,7 +14,7 @@
              "48": "./icon.png",
              "128": "./icon.png"
         },
-        "default_title": "这是一个示例Chrome插件default_title",
+        "default_title": "开发助手",
         "default_popup": "popup.html"
     },
     "content_scripts":[
@@ -26,5 +26,5 @@
     "background":{
         "service_worker": "service-worker.js"
     },
-    "permissions": ["downloads"]
+    "permissions": ["downloads","alarms","notifications"]
 }
