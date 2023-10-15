@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开发助手</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* color: #007bff; */
+      color: #5cb85c;
+      /* background-color: #5cb85c; */
+      /* border-color: #4cae4c; */
+    }
+
+    .container {
+      width: 480px;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .input-container {
+      margin-inline: 10px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    select {
+      padding: 5px;
+      margin-inline: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      background-color: #5cb85c;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #tips {
+        display: none;
+        transform: translate(-50%, -50%);
+        background-color: lightgreen;
+        animation: fadeOut 1s forwards;
+    }
+  </style>
+</head>
+<body>
+  <h2>时间转换</h2>
+  <div class="container">
+    <label for="timestampInput">当前时间：</label>
+    <div class="input-container">
+      <span id="current_ts"> </span> <span id="tips">复制完成</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" id="timestampInput" class="ts" placeholder="请输入时间戳">
+    </div>
+    <select id="unitSelect">
+      <option value="seconds">秒</option>
+      <option value="milliseconds">毫秒</option>
+    </select>
+    <button id="convertToTimestap">转换</button>
+    <div class="input-container">
+      <input type="text" id="datetimeOutput" class="dt">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="input-container">
+      <input type="text" id="datetimeInput" placeholder="请输入时间" class="dt">
+    </div>
+    <select id="unitSelect2">
+      <option value="seconds">秒</option>
+      <option value="milliseconds">毫秒</option>
+    </select>
+    <button id="convertToDatetime">转换</button>
+    <div class="input-container">
+      <input type="text" id="timestampOutput" class="ts">
+    </div>
+  </div>
+  <h2>编码解码转义</h2>
+  <div class="encrypt">
+    <textarea name="urlencode" id="tx_input" cols="60" rows="5" placeholder="输入"></textarea>
+    <button id="bt_urlencode">URLEcode</button>
+    <button id="bt_urldecode">URLDcode</button>
+    <button id="bt_jsonescope">JSON除转义</button>
+    <button id="bt_md5">MD5</button>
+    <button id="bt_base64encode">Base64 Encode</button>
+    <button id="bt_base64decode">Base64 Decode</button>
+    <br>
+    <textarea name="urloutput" id="tx_output" cols="60" rows="5" placeholder="输出"></textarea>
+  </div>
+  <script src="./lib/md5.js"> </script>
+  <script src="./popup.js"> </script>
+</body>
+</html>

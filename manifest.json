@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "这是一个示例Chrome插件name",
+    "version": "0.0.1",
+    "description": "hello, world",
+    "icons": {
+        "16": "./icon.png",
+        "48": "./icon.png",
+        "128": "./icon.png"
+    },
+    "action": {
+        "default_icon": {
+             "16": "./icon.png",
+             "48": "./icon.png",
+             "128": "./icon.png"
+        },
+        "default_title": "这是一个示例Chrome插件default_title",
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["*://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background":{
+        "service_worker": "service-worker.js"
+    },
+    "permissions": ["downloads"]
+}
