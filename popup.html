@@ -13,6 +13,11 @@
       /* border-color: #4cae4c; */
     }
 
+    .title {
+      font-weight:bold;
+      font-size: medium;
+    }
+
     .container {
       width: 480px;
       display: flex;
@@ -63,7 +68,7 @@
   </style>
 </head>
 <body>
-  <h2>时间转换</h2>
+  <label class="title">时间转换</label>
   <div class="container">
     <label for="timestampInput">当前时间：</label>
     <div class="input-container">
@@ -97,11 +102,11 @@
       <input type="text" id="timestampOutput" class="ts">
     </div>
   </div>
-  <h2>编码解码转义</h2>
+  <label class="title">编码解码转义</label>
   <div class="encrypt">
     <textarea name="urlencode" id="tx_input" cols="60" rows="5" placeholder="输入"></textarea>
-    <button id="bt_urlencode">URLEcode</button>
-    <button id="bt_urldecode">URLDcode</button>
+    <button id="bt_urlencode">URLEncode</button>
+    <button id="bt_urldecode">URLDecode</button>
     <button id="bt_jsonescope">JSON除转义</button>
     <button id="bt_md5">MD5</button>
     <button id="bt_base64encode">Base64 Encode</button>
